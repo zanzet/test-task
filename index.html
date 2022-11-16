@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>test-task</title>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="grid-wrap">
+                <div class="grid__form">
+                    <h1 class="grid__form-title">Contact Us</h1>
+                    <p class="grid__form-descript">The Voodoo team is looking forward to hearing from you!</p>
+                    <form action="#" class="form">
+                        <div class="form__wrap">
+                            <input type="text" name="name" placeholder="Full Name*" class="form__input" required>
+                            <input type="text" name="Position" placeholder="Title/Position*" class="form__input" required>
+                            <select  name="Practice" class="form__input select" required>
+                                <option disabled selected class="form__select-main">Practice / Institution*</option>
+                            </select>
+                            <input type="email" name="email" placeholder="Email Address*" class="form__input" required>
+                            <input type="tel" name="phone" placeholder="Phone Number*" class="form__input" required>
+                            <select  name="Medical" class="form__input select" required>
+                                <option disabled selected class="form__select-main">Medical Profession*</option>
+                                <option value="1" class="form__select-option">Option 1</option>
+                                <option value="2" class="form__select-option">Option 2</option>
+                                <option value="3" class="form__select-option">Option 3</option>
+                                <option value="4" class="form__select-option">Option 4</option>
+                                <option value="5" class="form__select-option">Option 5</option>
+                            </select>
+                        </div>
+                        <input type="text" name="Inquiry" placeholder="Type of Inquiry*" class="form__input Inquiry" required>
+                        <textarea name="message" class="form__textatea" placeholder="Enter Message*"></textarea>
+                        <button class="form__btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="grid__map">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap&v=weekly"
+      defer
+    ></script>
+</body>
+</html>
