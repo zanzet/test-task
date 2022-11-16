@@ -81,6 +81,7 @@
     line-height: 28px;
     color: #414042;
     opacity: 0.5;
+    resize: none;
 }
 .form__btn{
     width: 221.22px;
@@ -96,4 +97,40 @@
     color: #FFFFFF;
     margin-top: 70px;
 }
-
+.map{
+    width: 175px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 30px rgba(220, 221, 243, 0.25);
+    border-radius: 8px;
+    padding: 20px 38px 17px 19px;
+    overflow-x: hidden;
+}
+.map_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #1A1A1A;
+}
+.map__adres{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #1A1A1A;
+    width: 146px;
+}
+.map a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #858585;
+    text-decoration: none;
+}
+.map img{
+    margin-right: 5px;
+}
