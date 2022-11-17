@@ -19,19 +19,23 @@
                         <div class="form__wrap">
                             <input type="text" name="name" placeholder="Full Name*" class="form__input" required>
                             <input type="text" name="Position" placeholder="Title/Position*" class="form__input" required>
-                            <select  name="Practice" class="form__input select" required>
-                                <option disabled selected class="form__select-main">Practice / Institution*</option>
-                            </select>
+                            <div class="wrap-practice">
+                                <select  name="Practice" data-name="practice" class="form__input select" >
+                                    <option value="1" class="form__select-option">Option 1</option>
+                                    <option value="2" class="form__select-option">Option 2</option>
+                                </select>
+                            </div>
                             <input type="email" name="email" placeholder="Email Address*" class="form__input" required>
                             <input type="tel" name="phone" placeholder="Phone Number*" class="form__input" required>
-                            <select  name="Medical" class="form__input select" required>
-                                <option disabled selected class="form__select-main">Medical Profession*</option>
-                                <option value="1" class="form__select-option">Option 1</option>
-                                <option value="2" class="form__select-option">Option 2</option>
-                                <option value="3" class="form__select-option">Option 3</option>
-                                <option value="4" class="form__select-option">Option 4</option>
-                                <option value="5" class="form__select-option">Option 5</option>
-                            </select>
+                            <div class="wrap-medical">
+                                <select  name="medical" data-name="medical" class="form__input select">
+                                    <option value="1" class="form__select-option">Option 1</option>
+                                    <option value="2" class="form__select-option">Option 2</option>
+                                    <option value="3" class="form__select-option">Option 3</option>
+                                    <option value="4" class="form__select-option">Option 4</option>
+                                    <option value="5" class="form__select-option">Option 5</option>
+                                </select>
+                            </div>
                         </div>
                         <input type="text" name="Inquiry" placeholder="Type of Inquiry*" class="form__input Inquiry" required>
                         <textarea name="message" class="form__textatea" placeholder="Enter Message*"></textarea>
@@ -39,6 +43,16 @@
                     </form>
                 </div>
                 <div id="grid__map" class="grid__map"></div>
+            </div>
+        </div>
+        <div class="form__input select">
+            <h2 class="select__title">Medical Profession*</h2>
+            <img src="img/Shape.svg" alt="shape" class="select__shape">
+            <div class="select__chois ">
+                <span class="select__chois-option">Option 1</span>
+                <span class="select__chois-option">Option 2</span>
+                <span class="select__chois-option">Option 3</span>
+                <span class="select__chois-option">Option 4</span>
             </div>
         </div>
     </section>
