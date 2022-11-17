@@ -6,7 +6,7 @@ function initMap() {
     }
     const opt = { 
         center: pos,
-        zoom:17,
+        zoom:15,
         styles:[
             {
                 "featureType": "landscape",
@@ -141,18 +141,24 @@ for(let key of sel){
 const divChoise = document.querySelectorAll('.select__chois'),
       btn = document.querySelectorAll('.select__shape');
 
+function hideClass(){
+    divChoise.forEach(i=> i.classList.remove('active'))
+}
+
 function addClass (i){
     divChoise[i].classList.toggle('active')
 }
 
 btn.forEach((btn ,i)=>{
     
-    btn.addEventListener('click', e =>{
-    
-        divChoise.forEach((choise, index) =>{
-            if(btn[i]== choise[index]){
+    btn.addEventListener('click', () =>{
+        
+        for(let ind=0; ind<=divChoise.length; ind++){
+            
+            if(i == ind){
                 addClass(i)
+                break
             }
-        })
+        }
     });
 });
