@@ -43,7 +43,7 @@ function initMap() {
     const marker = new google.maps.Marker({
       position: pos,
       map: map,
-      icon: '../img/marker.svg'
+      icon: 'img/marker.svg'
     });
 
     const content =  '<div class="map">'+
