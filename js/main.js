@@ -75,52 +75,48 @@ function initMap() {
 
 window.initMap = initMap;
 
-//select hide
-    
+//select hide  
 const select = document.querySelectorAll('select');
 const sel = [...select]
+//customs select
+const practice = document.querySelector('.wrap-practice'),
+      medical = document.querySelector('.wrap-medical');
+
 
 sel.forEach(item =>{
     item.style.display = 'none';
 });
 
-//customs select
-const practice = document.querySelector('.wrap-practice'),
-      medical = document.querySelector('.wrap-medical');
 
 class Select{
+
     constructor(item){
         this.dataset = item.dataset.name;
         this.option =  [...item.children];
+        this.name = item.name
+        
         this.render()
     }
     render(){
     
         let div = document.createElement('div');
-  
+
         div.classList.add('form__input');
         div.classList.add('select');
         
-        if(this.dataset == 'practice'){
             div.innerHTML= ` 
-                            <h2 class="select__title">Practice / Institution*</h2>
+                            <h2 class="select__title">${this.dataset}</h2>
                             <img src="img/Shape.svg" alt="shape" class="select__shape">
                             `;
-            div.append(this.renderSpan() );
-            practice.append(div);
-        } else if(this.dataset == 'medical'){
-            div.innerHTML= `
-                            <h2 class="select__title">'Medical Profession*</h2>
-                            <img src="img/Shape.svg" alt="shape" class="select__shape">
-                            `;   
             div.append(this.renderSpan());
-            medical.append(div);
-        }
-        return div
+            
+            
+        return this.name == 'Practice'?  practice.append(div) : medical.append(div);
     }
     renderSpan(){
         
         let choise = document.createElement('div');
+
         choise.classList.add('select__chois');
 
         this.option.forEach(item => {  
@@ -132,18 +128,12 @@ class Select{
 }
 
 for(let key of sel){
-
-    key = new Select(key)
-   
+    key = new Select(key) 
 }
 
 //button active
 const divChoise = document.querySelectorAll('.select__chois'),
       btn = document.querySelectorAll('.select__shape');
-
-function hideClass(){
-    divChoise.forEach(i=> i.classList.remove('active'))
-}
 
 function addClass (i){
     divChoise[i].classList.toggle('active')
