@@ -103,14 +103,14 @@ class Select{
         
         if(this.dataset == 'practice'){
             div.innerHTML= ` 
-                            <h2 class="select__title">${'Practice / Institution*'}</h2>
+                            <h2 class="select__title">Practice / Institution*</h2>
                             <img src="img/Shape.svg" alt="shape" class="select__shape">
                             `;
             div.append(this.renderSpan() );
             practice.append(div);
         } else if(this.dataset == 'medical'){
             div.innerHTML= `
-                            <h2 class="select__title">${'Medical Profession*'}</h2>
+                            <h2 class="select__title">'Medical Profession*</h2>
                             <img src="img/Shape.svg" alt="shape" class="select__shape">
                             `;   
             div.append(this.renderSpan());
